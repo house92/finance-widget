@@ -1,5 +1,23 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+
+.widget {
+  margin: 4rem;
+  max-width: 40rem;
+  border: 2px solid #00576b; }
+  .widget .heading {
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #00576b; }
+  .widget .body {
+    padding: 2rem; }
+    .widget .body .group {
+      color: #439681;
+      font-weight: 600; }
+      .widget .body .group:not(:first-child) {
+        margin-top: 2rem; }
+    .widget .body label.control-label {
+      font-weight: 400;
+      color: #00576b; }
+    .widget .body input.form-control, .widget .body span.input-group-addon {
+      border-color: #00576b; }

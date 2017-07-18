@@ -1,0 +1,35 @@
+@import "colours";
+
+.widget {
+    margin: 4rem;
+    max-width: 40rem;
+    border: 2px solid map-get($colours, dark-green);
+
+    .heading {
+        padding: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: map-get($colours, dark-green);
+    }
+
+    .body {
+        padding: 2rem;
+
+        .group {
+            color: map-get($colours, medium-green);
+            font-weight: 600;
+
+            &:not(:first-child) {
+                margin-top: 2rem;
+            }
+        }
+        label.control-label {
+            font-weight: 400;
+            color: map-get($colours, dark-green);
+        }
+        input.form-control, span.input-group-addon {
+            border-color: map-get($colours, dark-green);
+        }
+    }
+}
