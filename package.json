@@ -27,7 +27,8 @@
     "gulp-sass": "^3.1.0",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-rangeslider": "^2.1.0"
   },
   "scripts": {
     "tests": "mocha --compilers js:babel-core/register --require ./test/test-helper.js 'test/**/*.@(js|jsx)' -R nyan",

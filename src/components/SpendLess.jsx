@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import { Row, Col, Glyphicon } from "react-bootstrap";
+import Slider from 'react-rangeslider';
+import 'react-rangeslider/lib/index.css';
 
 export default class SpendLess extends Component {
     render() {
         const savingSliders = this.props.expenditures.filter(expenditure => expenditure.frequency === "monthly").map((expenditure, i) => {
-            const amount = this.props.expenditures.find(expenditure => expenditure.name === expenditure.name).amount;
+            const actualAmount = this.props.actualExpenditures.find(innerExpenditure => innerExpenditure.name === expenditure.name).amount;
+            const amount = this.props.expenditures.find(innerExpenditure => innerExpenditure.name === expenditure.name).amount;
             return (
                 <Row className={expenditure.name} key={`slider${i}`}>
                     <Col md={5}>
                         <label>{expenditure.name}</label>
                     </Col>
                     <Col md={7}>
-                        <input
-                            type="range"
-                            min="0"
-                            max={amount + amount / 10}
-                            step="10"
+                        <Slider
+                            min={0}
+                            max={actualAmount}
                             value={amount}
-                            onChange={this.props.updateParentState}
+                            onChange={this.updateParentState}
                             data-state-key="expenditures"
                             data-name={expenditure.name}
                             data-key="amount"
@@ -61,7 +62,7 @@ export default class SpendLess extends Component {
 
                     {savingSliders}
 
-                    <div className="saving">This means you're saving <span className="saving-amount">£{this.props.saving}</span> per month!</div>
+                    <div className="saving">This means you're saving <span className="saving-amount">£{this.props.savings}</span> per month!</div>
 
                     <div className="find-ways-to-save">
                         <a href="https://www.google.co.uk" target="_blank" rel="noopener noreferrer">Find ways to save</a>
