@@ -39,7 +39,7 @@ const initialData = {
 export default class IncomeAndSpendContainer extends Component {
     constructor(props) {
         super(props);
-        this.state = initialData;
+        this.state = JSON.parse(window.localStorage.getItem("state")) || initialData;
         this.updateState = this.updateState.bind(this);
     }
 
@@ -49,7 +49,9 @@ export default class IncomeAndSpendContainer extends Component {
         const name = e.target.dataset.name;
         const key = e.target.dataset.key;
         newState[stateKey].find(obj => obj.name === name)[key] = Number(e.target.value);
-        this.setState(newState);
+        this.setState(newState, () => {
+          window.localStorage.setItem("state", JSON.stringify(this.state));
+        });
     }
 
     render() {
