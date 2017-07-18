@@ -4,6 +4,8 @@
     margin: 4rem;
     max-width: 40rem;
     border: 2px solid map-get($colours, dark-green);
+    display: inline-block;
+    vertical-align: top;
 
     .heading {
         padding: 0.5rem;
@@ -15,6 +17,7 @@
 
     .body {
         padding: 2rem;
+        color: map-get($colours, dark-green);
 
         .group {
             color: map-get($colours, medium-green);
@@ -30,6 +33,23 @@
         }
         input.form-control, span.input-group-addon {
             border-color: map-get($colours, dark-green);
+        }
+        [class^=col-] {
+            margin: 2px auto;
+        }
+    }
+
+    &.spend-less {
+        .tagline {
+            text-align: center;
+        }
+        .saving {
+            text-align: center;
+            font-weight: 600;
+
+            .saving-amount {
+                color: map-get($colours, medium-green);
+            }
         }
     }
 }

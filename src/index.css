@@ -2,7 +2,9 @@
 .widget {
   margin: 4rem;
   max-width: 40rem;
-  border: 2px solid #00576b; }
+  border: 2px solid #00576b;
+  display: inline-block;
+  vertical-align: top; }
   .widget .heading {
     padding: 0.5rem;
     text-align: center;
@@ -10,7 +12,8 @@
     color: #fff;
     background-color: #00576b; }
   .widget .body {
-    padding: 2rem; }
+    padding: 2rem;
+    color: #00576b; }
     .widget .body .group {
       color: #439681;
       font-weight: 600; }
@@ -21,3 +24,12 @@
       color: #00576b; }
     .widget .body input.form-control, .widget .body span.input-group-addon {
       border-color: #00576b; }
+    .widget .body [class^=col-] {
+      margin: 2px auto; }
+  .widget.spend-less .tagline {
+    text-align: center; }
+  .widget.spend-less .saving {
+    text-align: center;
+    font-weight: 600; }
+    .widget.spend-less .saving .saving-amount {
+      color: #439681; }
