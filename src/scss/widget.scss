@@ -48,7 +48,48 @@
             font-weight: 600;
 
             .saving-amount {
-                color: map-get($colours, medium-green);
+                color: map-get($colours, bright-green);
+            }
+        }
+        .find-ways-to-save {
+            text-align: center;
+            margin: 1rem 3rem;
+            padding: 1rem 1rem;
+            border: 1px solid map-get($colours, bright-green);
+            border-radius: 5px;
+
+            a {
+                font-weight: 600;
+                color: map-get($colours, bright-green);
+
+                &:hover {
+                    text-decoration: none;
+                }
+                &:focus {
+                    text-decoration: none;
+                    outline: none;
+                }
+            }
+        }
+        .feedback {
+            text-align: right;
+
+            span {
+                margin-right: 1rem;
+
+                &.glyphicon {
+                    font-size: 22px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    &.like {
+                        color: map-get($colours, bright-green);
+                    }
+                    &.dislike {
+                        color: map-get($colours, dark-green);
+                    }
+                }
             }
         }
     }

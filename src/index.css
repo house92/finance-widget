@@ -32,4 +32,30 @@
     text-align: center;
     font-weight: 600; }
     .widget.spend-less .saving .saving-amount {
-      color: #439681; }
+      color: #69ba08; }
+  .widget.spend-less .find-ways-to-save {
+    text-align: center;
+    margin: 1rem 3rem;
+    padding: 1rem 1rem;
+    border: 1px solid #69ba08;
+    border-radius: 5px; }
+    .widget.spend-less .find-ways-to-save a {
+      font-weight: 600;
+      color: #69ba08; }
+      .widget.spend-less .find-ways-to-save a:hover {
+        text-decoration: none; }
+      .widget.spend-less .find-ways-to-save a:focus {
+        text-decoration: none;
+        outline: none; }
+  .widget.spend-less .feedback {
+    text-align: right; }
+    .widget.spend-less .feedback span {
+      margin-right: 1rem; }
+      .widget.spend-less .feedback span.glyphicon {
+        font-size: 22px; }
+        .widget.spend-less .feedback span.glyphicon:hover {
+          cursor: pointer; }
+        .widget.spend-less .feedback span.glyphicon.like {
+          color: #69ba08; }
+        .widget.spend-less .feedback span.glyphicon.dislike {
+          color: #00576b; }

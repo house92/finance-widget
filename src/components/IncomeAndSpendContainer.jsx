@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import IncomeAndSpend from "./IncomeAndSpend";
+import SpendLessContainer from "./SpendLessContainer";
 
 const initialData = {
   "incomes": [
@@ -55,6 +56,11 @@ export default class IncomeAndSpendContainer extends Component {
     }
 
     render() {
-        return <IncomeAndSpend {...this.state} updateParentState={this.updateState} />;
+        return(
+          <div>
+            <IncomeAndSpend {...this.state} updateParentState={this.updateState} />
+            <SpendLessContainer expenditures={this.state.expenditures} />
+          </div>
+        );
     }
 }
